@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
+import image from "../../assets/perfil.jpg"
 
 const About = ({ translations, language }) => {
   return (
@@ -7,7 +8,7 @@ const About = ({ translations, language }) => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <img
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+            src={image}
             alt="Profile"
             className="w-48 h-48 rounded-full object-cover shadow-lg"
           />
