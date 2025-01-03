@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa';
+import { useDarkMode } from '../../contexts/DarkModeContext';
 
-const Contact = ({ darkMode }) => {
+const Contact = () => {
+  const { darkMode } = useDarkMode();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',

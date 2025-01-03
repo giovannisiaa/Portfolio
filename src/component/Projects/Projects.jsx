@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import categories from '../../data/categories';
 import ProjectsModal from './ProjectModal';
 import projects from '../../data/projects.json';
+import { useDarkMode } from '../../contexts/DarkModeContext';
 
-const Projects = ({ darkMode }) => {
+const Projects = () => {
+
+  const { darkMode } = useDarkMode();
 
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedProject, setSelectedProject] = useState(null);
@@ -89,7 +92,6 @@ const Projects = ({ darkMode }) => {
       </section>
 
       <ProjectsModal
-        darkMode={darkMode}
         selectedProject={selectedProject}
         setSelectedProject={setSelectedProject}
       />

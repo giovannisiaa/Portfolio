@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
 import image from "../../assets/perfil.jpg"
 
 const About = ({ translations, language }) => {
+
   return (
     <section id="about" className="pt-24 pb-16 px-6">
       <div className="container mx-auto">

@@ -1,7 +1,10 @@
 import React from 'react';
 import technologies from '../../data/technologies';
+import { useDarkMode } from '../../contexts/DarkModeContext';
 
-const Technologies = ({ darkMode }) => {
+const Technologies = () => {
+  const { darkMode } = useDarkMode();
+
   return (
     <section id="technologies" className={`py-16 ${darkMode ? "bg-gray-800" : "bg-gray-100"} px-6`}>
       <div className="container mx-auto">

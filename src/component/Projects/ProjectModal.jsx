@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FaTimes, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { useDarkMode } from '../../contexts/DarkModeContext';
 
-const ProjectModal = ({ darkMode, selectedProject, setSelectedProject }) => {
+const ProjectModal = ({ selectedProject, setSelectedProject }) => {
+  const { darkMode } = useDarkMode();
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
