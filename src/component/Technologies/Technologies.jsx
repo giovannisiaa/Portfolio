@@ -8,8 +8,8 @@ const Technologies = ({ darkMode, technologies }) => {
         <div className="flex flex-wrap justify-center gap-8">
           {technologies.map((tech, index) => (
             <div key={index} className="flex flex-col items-center">
-              <tech.icon className="text-6xl text-gray-700 hover:text-blue-600 transition-colors duration-300" />
-              <span className="mt-2 text-gray-600">{tech.name}</span>
+              <tech.icon className="text-6xl text-white-700 hover:text-blue-600 transition-colors duration-300" />
+              <span className="mt-2 text-white-600">{tech.name}</span>
             </div>
           ))}
         </div>
