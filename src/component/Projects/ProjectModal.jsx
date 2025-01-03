@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaTimes, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-const ProjectModal = ({ darkMode, selectedProject, setSelectedProject, projectImages, currentImageIndex, setCurrentImageIndex }) => {
+const ProjectModal = ({ darkMode, selectedProject, setSelectedProject, projectImages }) => {
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   return (
     selectedProject && (
       <div

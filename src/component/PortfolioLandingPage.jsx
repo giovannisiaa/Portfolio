@@ -25,8 +25,6 @@ const PortfolioLandingPage = () => {
 
   const [language, setLanguage] = useState("es");
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   const projectImages = [
     [
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
@@ -117,8 +115,6 @@ const PortfolioLandingPage = () => {
         selectedProject={selectedProject}
         setSelectedProject={setSelectedProject}
         projectImages={projectImages}
-        currentImageIndex={currentImageIndex}
-        setCurrentImageIndex={setCurrentImageIndex}
       />
 
       <Technologies darkMode={darkMode} technologies={technologies} />
