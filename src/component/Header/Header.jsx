@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useTransition } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { useDarkMode } from "../../contexts/DarkModeContext";
+import { useTranslation } from "../../contexts/LanguageContext";
 
-const Header = ({ language, setLanguage }) => {
+const Header = () => {
+  const { language, setLanguage } = useTranslation();
   const { darkMode, setDarkMode } = useDarkMode();
 
   return (

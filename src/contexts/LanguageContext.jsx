@@ -1,19 +1,22 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useContext } from 'react';
+import translations from '../data/translations.json';
 
-export const LanguageContext = createContext();
+const TranslationContext = createContext();
 
-const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState("en"); // Idioma por defecto
+export const TranslationProvider = ({ children }) => {
+  const [language, setLanguage] = useState('es');
 
-  const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "en" ? "es" : "en"));
+  const value = {
+    language,
+    setLanguage,
+    translations: translations[language],
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+    <TranslationContext.Provider value={value}>
       {children}
-    </LanguageContext.Provider>
+    </TranslationContext.Provider>
   );
 };
 
-export default LanguageProvider;
+export const useTranslation = () => useContext(TranslationContext);

@@ -1,8 +1,10 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
-import image from "../../assets/perfil.jpg"
+import image from "../../assets/perfil.jpg";
+import { useTranslation } from '../../contexts/LanguageContext';
 
-const About = ({ translations, language }) => {
+const About = () => {
+  const { language, translations } = useTranslation();
 
   return (
     <section id="about" className="pt-24 pb-16 px-6">
@@ -14,9 +16,9 @@ const About = ({ translations, language }) => {
             className="w-48 h-48 rounded-full object-cover shadow-lg"
           />
           <div className="md:w-2/3">
-            <h1 className="text-4xl font-bold mb-2">{translations[language].greeting}</h1>
-            <h2 className="text-2xl text-blue-600 mb-4">{translations[language].role}</h2>
-            <p className="text-lg text-white-600 mb-6">{translations[language].description}</p>
+            <h1 className="text-4xl font-bold mb-2">{translations.greeting}</h1>
+            <h2 className="text-2xl text-blue-600 mb-4">{translations.role}</h2>
+            <p className="text-lg text-white-600 mb-6">{translations.description}</p>
             <div className="flex space-x-4 items-center">
               <FaGithub className="text-2xl hover:text-gray-700 cursor-pointer" />
               <FaLinkedin className="text-2xl hover:text-blue-600 cursor-pointer" />
