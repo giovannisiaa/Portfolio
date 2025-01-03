@@ -25,22 +25,6 @@ const PortfolioLandingPage = () => {
 
   const [language, setLanguage] = useState("es");
 
-  const projectImages = [
-    [
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb"
-    ],
-    [
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb"
-    ],
-    [
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb"
-    ],
-  ];
-
   const categories = [
     { id: "all", name: "All Projects" },
     { id: "applications", name: "Applications" },
@@ -54,41 +38,6 @@ const PortfolioLandingPage = () => {
     { icon: SiPython, name: "Python" },
     { icon: SiDocker, name: "Docker" }
   ];
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value
-    }));
-    setErrors((prev) => ({
-      ...prev,
-      [name]: ""
-    }));
-  };
-
-  const validateForm = () => {
-    const newErrors = {};
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Email is invalid";
-    }
-    if (!formData.message.trim()) newErrors.message = "Message is required";
-    return newErrors;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newErrors = validateForm();
-    if (Object.keys(newErrors).length === 0) {
-      setIsSubmitted(true);
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      setErrors(newErrors);
-    }
-  };
 
   const filteredProjects = selectedCategory === "all"
     ? projects
@@ -114,7 +63,6 @@ const PortfolioLandingPage = () => {
         darkMode={darkMode}
         selectedProject={selectedProject}
         setSelectedProject={setSelectedProject}
-        projectImages={projectImages}
       />
 
       <Technologies darkMode={darkMode} technologies={technologies} />
