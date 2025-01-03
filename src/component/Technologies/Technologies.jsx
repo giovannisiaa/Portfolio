@@ -6,7 +6,7 @@ const Technologies = () => {
   const { darkMode } = useDarkMode();
 
   return (
-    <section id="technologies" className={`py-16 ${darkMode ? "bg-gray-800" : "bg-gray-100"} px-6`}>
+    <section id="technologies" className={`py-16 px-6`}>
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">Technologies</h2>
         <div className="flex flex-wrap justify-center gap-8">
