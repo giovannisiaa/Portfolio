@@ -1,6 +1,7 @@
 import React from 'react';
+import categories from '../../data/categories';
 
-const Projects = ({ darkMode, categories, selectedCategory, setSelectedCategory, filteredProjects, setSelectedProject }) => {
+const Projects = ({ darkMode, selectedCategory, setSelectedCategory, filteredProjects, setSelectedProject }) => {
   return (
     <section id="projects" className={`py-16 ${darkMode ? "bg-gray-800" : "bg-gray-100"} px-6`}>
       <div className="container mx-auto">
@@ -75,6 +76,9 @@ const Projects = ({ darkMode, categories, selectedCategory, setSelectedCategory,
         </div>
       </div>
     </section>
+
+
+
   );
 };
 

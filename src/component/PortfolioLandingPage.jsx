@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { FaGithub, FaLinkedin, FaEnvelope, FaSun, FaMoon, FaDownload, FaTimes, FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { SiJavascript, SiReact, SiNodedotjs, SiPython, SiDocker } from "react-icons/si";
 import Header from "./Header/Header";
 import About from "./About/About";
 import Projects from "./Projects/Projects";
@@ -17,20 +15,6 @@ const PortfolioLandingPage = () => {
 
   const [language, setLanguage] = useState("es");
 
-  const categories = [
-    { id: "all", name: "All Projects" },
-    { id: "applications", name: "Applications" },
-    { id: "landing-pages", name: "Landing Pages" }
-  ];
-
-  const technologies = [
-    { icon: SiJavascript, name: "JavaScript" },
-    { icon: SiReact, name: "React" },
-    { icon: SiNodedotjs, name: "Node.js" },
-    { icon: SiPython, name: "Python" },
-    { icon: SiDocker, name: "Docker" }
-  ];
-
   const filteredProjects = selectedCategory === "all"
     ? projects
     : projects.filter(project => project.category === selectedCategory);
@@ -44,7 +28,6 @@ const PortfolioLandingPage = () => {
 
       <Projects
         darkMode={darkMode}
-        categories={categories}
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
         filteredProjects={filteredProjects}
@@ -57,7 +40,7 @@ const PortfolioLandingPage = () => {
         setSelectedProject={setSelectedProject}
       />
 
-      <Technologies darkMode={darkMode} technologies={technologies} />
+      <Technologies darkMode={darkMode} />
 
       <Contact darkMode={darkMode} />
 
