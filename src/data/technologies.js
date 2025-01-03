@@ -1,25 +1,34 @@
-import { SiJavascript, SiReact, SiNodedotjs, SiPython, SiDocker } from "react-icons/si";
+import { DiJava } from "react-icons/di";
+import { SiJavascript, SiReact, SiSpringboot, SiCss3, SiHtml5, SiMysql } from "react-icons/si";
 
 const technologies = [
-  {
-    icon: SiJavascript,
-    name: "JavaScript"
-  },
   {
     icon: SiReact,
     name: "React"
   },
   {
-    icon: SiNodedotjs,
-    name: "Node.js"
+    icon: DiJava ,
+    name: "Java"
   },
   {
-    icon: SiPython,
-    name: "Python"
+    icon: SiSpringboot,
+    name: "Spring Boot"
+  },
+    {
+    icon: SiHtml5,
+    name: "HTML"
   },
   {
-    icon: SiDocker,
-    name: "Docker"
+    icon: SiCss3,
+    name: "CSS"
+  },
+    {
+    icon: SiJavascript,
+    name: "JavaScript"
+  },
+  {
+    icon: SiMysql ,
+    name: "Mysql"
   }
 ];
 

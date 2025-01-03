@@ -1,10 +1,10 @@
-import PortfolioLandingPage from './component/PortfolioLandingPage'
+import Home from './pages/Home'
 
 function App() {
 
   return (
     <>
-      <PortfolioLandingPage />
+      <Home />
     </>
   )
 }
