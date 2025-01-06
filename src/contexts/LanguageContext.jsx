@@ -1,22 +1,24 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import translations from '../data/translations.json';
 
-const TranslationContext = createContext();
+const LanguageContext = createContext();
 
-export const TranslationProvider = ({ children }) => {
-  const [language, setLanguage] = useState('es');
+export const LanguageProvider = ({ children }) => {
+  const [language, setLanguage] = useState('en');
 
   const value = {
     language,
     setLanguage,
-    translations: translations[language],
+    translations: (section) => translations[section][language]
   };
 
   return (
-    <TranslationContext.Provider value={value}>
+    <LanguageContext.Provider value={value}>
       {children}
-    </TranslationContext.Provider>
+    </LanguageContext.Provider>
   );
 };
 
-export const useTranslation = () => useContext(TranslationContext);
+export const useTranslation = () => {
+  return useContext(LanguageContext);
+};

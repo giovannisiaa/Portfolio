@@ -3,10 +3,11 @@ import categories from '../../data/categories';
 import ProjectsModal from './ProjectModal';
 import projects from '../../data/projects.json';
 import { useDarkMode } from '../../contexts/DarkModeContext';
+import { useTranslation } from '../../contexts/LanguageContext';
 
 const Projects = () => {
-
   const { darkMode } = useDarkMode();
+  const { language, translations } = useTranslation();
 
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedProject, setSelectedProject] = useState(null);
@@ -19,11 +20,11 @@ const Projects = () => {
     <>
       <section id="projects" className={`py-16 ${darkMode ? "bg-gray-800" : "bg-gray-100"} px-6`}>
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">My Projects</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{translations("projects").title}</h2>
 
           {/* Category Filter */}
           <div className="flex justify-center mb-8 space-x-4">
-            {categories.map((category) => (
+            {categories[language].map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -48,12 +49,12 @@ const Projects = () => {
               >
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={project.title[language]}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>{project.description}</p>
+                  <h3 className="text-xl font-bold mb-2">{project.title[language]}</h3>
+                  <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>{project.description[language]}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
                       <span

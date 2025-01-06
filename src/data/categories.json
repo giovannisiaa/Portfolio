@@ -1,5 +1,30 @@
-[
-  { "id": "all", "name": "All Projects" },
-  { "id": "applications", "name": "Applications" },
-  { "id": "landing-pages", "name": "Landing Pages" }
-]
+{
+  "es": [
+    {
+      "id": "all",
+      "name": "Todos"
+    },
+    {
+      "id": "applications",
+      "name": "Aplicaciones"
+    },
+    {
+      "id": "websites",
+      "name": "Sitios Web"
+    }
+  ],
+  "en": [
+    {
+      "id": "all",
+      "name": "All"
+    },
+    {
+      "id": "applications",
+      "name": "Applications"
+    },
+    {
+      "id": "websites",
+      "name": "Websites"
+    }
+  ]
+}

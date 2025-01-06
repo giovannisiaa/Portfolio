@@ -1,15 +1,29 @@
 [
   {
     "id": 1,
-    "title": "Argento Shoes",
-    "description": "Solución de comercio electrónico para una empresa de calzado con sistemas de gestión integrados.",
+    "title": {
+      "es": "Argento Shoes",
+      "en": "Argento Shoes"
+    },
+    "description": {
+      "es": "Solución de comercio electrónico para una empresa de calzado con sistemas de gestión integrados.",
+      "en": "E-commerce solution for a footwear company with integrated management systems."
+    },
     "image": "https://images.unsplash.com/photo-1661956602116-aa6865609028",
     "demo": "https://demo.example.com",
     "github": "https://github.com",
     "category": "applications",
-    "technologies": ["Java", "MySQL", "JasperReports", "Swing"],
+    "technologies": [
+      "Java",
+      "MySQL",
+      "JasperReports",
+      "Swing"
+    ],
     "videoId": "dQw4w9WgXcQ",
-    "longDescription": "El objetivo general del proyecto fue el desarrollo e implementación de una herramienta de software para una empresa de calzado. Dicho sistema, está integrado con un sistema encargado de gestionar la operatoria diaria de la fábrica, y otro encargado de soportar las tareas de registración y distribución de ventas mayoristas y minoristas a sus propias sucursales.",
+    "longDescription": {
+      "es": "El objetivo general del proyecto fue el desarrollo e implementación de una herramienta de software para una empresa de calzado. Dicho sistema, está integrado con un sistema encargado de gestionar la operatoria diaria de la fábrica, y otro encargado de soportar las tareas de registración y distribución de ventas mayoristas y minoristas a sus propias sucursales.",
+      "en": "The general objective of the project was the development and implementation of a software tool for a footwear company. This system is integrated with a system responsible for managing the daily operations of the factory, and another responsible for supporting the tasks of registration and distribution of wholesale and retail sales to its own branches."
+    },
     "images": [
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
       "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb"
@@ -17,15 +31,30 @@
   },
   {
     "id": 2,
-    "title": "Sistema de producto",
-    "description": "Aplicación web de gestión de productos en tiempo real con funciones de administración.",
+    "title": {
+      "es": "Sistema de producto",
+      "en": "Product System"
+    },
+    "description": {
+      "es": "Aplicación web de gestión de productos en tiempo real con funciones de administración.",
+      "en": "Real-time product management web application with administration functions."
+    },
     "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
     "demo": "https://demo.example.com",
     "github": "https://github.com",
     "category": "applications",
-    "technologies": ["React", "Java", "Mysql", "CSS", "Spring Boot"],
+    "technologies": [
+      "React",
+      "Java",
+      "Mysql",
+      "CSS",
+      "Spring Boot"
+    ],
     "videoId": "dQw4w9WgXcQ",
-    "longDescription": "Aplicación web donde el usuario podrá cargar los productos que venda en su negocio y mostrarlos al público. Se podrá modificar además distintos parámetros de la página, como la foto de portada, el título, la descripción, etc. Además, se tendrá un apartado especial para administrador donde podrá realizar la modificación de toda la página, como agregar nuevos productos, agregar nuevas categorías para los productos y modificar los detalles de la página, etc. Para acceder a la sección de administrador se contará con un usuario y contraseña previamente configurado para quien posea el sistema.",
+    "longDescription": {
+      "es": "Aplicación web donde el usuario podrá cargar los productos que venda en su negocio y mostrarlos al público. Se podrá modificar además distintos parámetros de la página, como la foto de portada, el título, la descripción, etc. Además, se tendrá un apartado especial para administrador donde podrá realizar la modificación de toda la página, como agregar nuevos productos, agregar nuevas categorías para los productos y modificar los detalles de la página, etc. Para acceder a la sección de administrador se contará con un usuario y contraseña previamente configurado para quien posea el sistema.",
+      "en": "Web application where the user can upload the products they sell in their business and display them to the public. Various page parameters can also be modified, such as the cover photo, title, description, etc. Additionally, there will be a special section for the administrator where they can modify the entire page, such as adding new products, adding new categories for products, and modifying page details, etc. To access the administrator section, a pre-configured username and password will be required for the system owner."
+    },
     "images": [
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
@@ -34,18 +63,27 @@
   },
   {
     "id": 3,
-    "title": "Noviembre Cafe",
-    "description": "Landing page para una cafetería que muestra sus productos, la carta, ubicación y contacto.",
+    "title": {
+      "es": "Noviembre Cafe",
+      "en": "November Cafe"
+    },
+    "description": {
+      "es": "Landing page para una cafetería que muestra sus productos, la carta, ubicación y contacto.",
+      "en": "Landing page for a cafe that showcases its products, menu, location, and contact information."
+    },
+    "longDescription": {
+      "es": "Noviembre Cafe es una landing page diseñada para una cafetería. La página muestra una atractiva presentación de los productos de la cafetería, incluyendo imágenes y descripciones de los artículos del menú. Además, proporciona información detallada sobre la ubicación de la cafetería, con un mapa interactivo para facilitar la llegada de los clientes. También incluye una sección de contacto para que los clientes puedan comunicarse fácilmente con la cafetería.",
+      "en": "November Cafe is a landing page designed for a cafe. The page features an attractive presentation of the cafe's products, including images and descriptions of menu items. It also provides detailed information about the cafe's location, with an interactive map to help customers find their way. Additionally, it includes a contact section so customers can easily get in touch with the cafe."
+    },
     "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
     "demo": "https://demo.example.com",
     "github": "https://github.com",
-    "category": "landing-pages",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "videoId": "dQw4w9WgXcQ",
-    "longDescription": "Noviembre Cafe es una landing page diseñada para una cafetería. La página muestra una atractiva presentación de los productos de la cafetería, incluyendo imágenes y descripciones de los artículos del menú. Además, proporciona información detallada sobre la ubicación de la cafetería, con un mapa interactivo para facilitar la llegada de los clientes. También incluye una sección de contacto para que los clientes puedan comunicarse fácilmente con la cafetería para reservas o consultas.",
-    "images": [
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb"
-    ]
+    "category": "websites",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "videoId": "dQw4w9WgXcQ"
   }
 ]

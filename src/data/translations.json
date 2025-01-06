@@ -1,18 +1,74 @@
 {
-  "es": {
-    "about": "Sobre mí",
-    "projects": "Proyectos",
-    "contact": "Contacto",
-    "greeting": "Hola, soy Giovanni",
-    "role": "Desarrollador de Software",
-    "description": "Estudiante de la Licenciatura en Sistemas, apasionado por aprender y desarrollarme en el ámbito de IT. Busco mi primera experiencia laboral para aplicar y ampliar mis conocimientos en tecnologías. Me destaco por mi capacidad de aprendizaje rápido, resolución de problemas, trabajo en equipo y adaptabilidad."
+  "header": {
+    "es": {
+      "about": "Sobre mí",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "en": {
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
   },
-  "en": {
-    "about": "About",
-    "projects": "Projects",
-    "contact": "Contact",
-    "greeting": "Hi, I'm Giovanni",
-    "role": "Software Developer",
-    "description": "Computer Science undergraduate with a strong enthusiasm for learning and growing in the IT field. I am seeking my first professional experience to apply and expand my knowledge in technology. I excel in quick learning, problem-solving, teamwork, and adaptability."
+  "about": {
+    "es": {
+      "title": "Sobre mí",
+      "greeting": "Hola, soy Giovanni",
+      "role": "Desarrollador de Software",
+      "description": "Estudiante de la Licenciatura en Sistemas, apasionado por aprender y desarrollarme en el ámbito de IT. Busco mi primera experiencia laboral para aplicar y ampliar mis conocimientos en tecnologías. Me destaco por mi capacidad de aprendizaje rápido, resolución de problemas, trabajo en equipo y adaptabilidad.",
+      "downloadCV": "Descargar CV"
+    },
+    "en": {
+      "title": "About",
+      "greeting": "Hi, I'm Giovanni",
+      "role": "Software Developer",
+      "description": "Computer Science undergraduate with a strong enthusiasm for learning and growing in the IT field. I am seeking my first professional experience to apply and expand my knowledge in technology. I excel in quick learning, problem-solving, teamwork, and adaptability.",
+      "downloadCV": "Download CV"
+    }
+  },
+  "projects": {
+    "es": {
+      "title": "Mis Proyectos",
+      "all": "Todos",
+      "applications": "Aplicaciones",
+      "websites": "Sitios Web"
+    },
+    "en": {
+      "title": "My Projects",
+      "all": "All",
+      "applications": "Applications",
+      "websites": "Websites"
+    }
+  },
+  "technologies": {
+    "es": {
+      "title": "Tecnologías"
+    },
+    "en": {
+      "title": "Technologies"
+    }
+  },
+  "contact": {
+    "es": {
+      "title": "Contacto",
+      "getInTouch": "Ponte en contacto",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "sendMessage": "Enviar mensaje",
+      "connectWithMe": "Conéctate conmigo",
+      "downloadResume": "Descargar CV"
+    },
+    "en": {
+      "title": "Contact",
+      "getInTouch": "Get In Touch",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "sendMessage": "Send Message",
+      "connectWithMe": "Connect With Me",
+      "downloadResume": "Download Resume"
+    }
   }
 }

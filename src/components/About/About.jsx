@@ -4,7 +4,7 @@ import image from "../../assets/perfil.jpg";
 import { useTranslation } from '../../contexts/LanguageContext';
 
 const About = () => {
-  const { language, translations } = useTranslation();
+  const { translations } = useTranslation();
 
   return (
     <section id="about" className="pt-24 pb-16 px-6">
@@ -16,9 +16,9 @@ const About = () => {
             className="w-48 h-48 rounded-full object-cover shadow-lg"
           />
           <div className="md:w-2/3">
-            <h1 className="text-4xl font-bold mb-2">{translations.greeting}</h1>
-            <h2 className="text-2xl text-blue-600 mb-4">{translations.role}</h2>
-            <p className="text-lg text-white-600 mb-6">{translations.description}</p>
+            <h1 className="text-4xl font-bold mb-2">{translations("about").greeting}</h1>
+            <h2 className="text-2xl text-blue-600 mb-4">{translations("about").role}</h2>
+            <p className="text-lg text-white-600 mb-6">{translations("about").description}</p>
             <div className="flex space-x-4 items-center">
               <FaGithub className="text-2xl hover:text-gray-700 cursor-pointer" />
               <FaLinkedin className="text-2xl hover:text-blue-600 cursor-pointer" />
@@ -28,7 +28,7 @@ const About = () => {
                 download
                 className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
               >
-                <FaDownload /> Download CV
+                <FaDownload /> {translations("about").downloadCV}
               </a>
             </div>
           </div>

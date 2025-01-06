@@ -1,10 +1,10 @@
-import React, { useContext, useTransition } from "react";
+import React from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { useDarkMode } from "../../contexts/DarkModeContext";
 import { useTranslation } from "../../contexts/LanguageContext";
 
 const Header = () => {
-  const { language, setLanguage } = useTranslation();
+  const { language, setLanguage, translations } = useTranslation();
   const { darkMode, setDarkMode } = useDarkMode();
 
   return (
@@ -27,9 +27,9 @@ const Header = () => {
               >
                 {darkMode ? <FaSun className="text-yellow-400" /> : <FaMoon className="text-gray-600" />}
               </button>
-              <a href="#about" className={`hover:text-blue-600 transition-colors`}>About</a>
-              <a href="#projects" className={`hover:text-blue-600 transition-colors`}>Projects</a>
-              <a href="#contact" className={`hover:text-blue-600 transition-colors`}>Contact</a>
+              <a href="#about" className={`hover:text-blue-600 transition-colors`}>{translations('header').about}</a>
+              <a href="#projects" className={`hover:text-blue-600 transition-colors`}>{translations('header').projects}</a>
+              <a href="#contact" className={`hover:text-blue-600 transition-colors`}>{translations('header').contact}</a>
             </div>
           </div>
         </nav>

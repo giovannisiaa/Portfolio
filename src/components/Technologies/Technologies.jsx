@@ -1,14 +1,14 @@
 import React from 'react';
 import technologies from '../../data/technologies';
-import { useDarkMode } from '../../contexts/DarkModeContext';
+import { useTranslation } from '../../contexts/LanguageContext';
 
 const Technologies = () => {
-  const { darkMode } = useDarkMode();
+  const { translations } = useTranslation();
 
   return (
     <section id="technologies" className={`py-16 px-6`}>
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">Technologies</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center">{translations("technologies").title}</h2>
         <div className="flex flex-wrap justify-center gap-8">
           {technologies.map((tech, index) => (
             <div key={index} className="flex flex-col items-center">

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { FaTimes, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { useDarkMode } from '../../contexts/DarkModeContext';
+import { useTranslation } from '../../contexts/LanguageContext';
 
 const ProjectModal = ({ selectedProject, setSelectedProject }) => {
   const { darkMode } = useDarkMode();
+  const { language } = useTranslation();
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -70,9 +72,9 @@ const ProjectModal = ({ selectedProject, setSelectedProject }) => {
           </div>
 
           <div className="p-6">
-            <h3 className="text-2xl font-bold mb-4">{selectedProject.title}</h3>
+            <h3 className="text-2xl font-bold mb-4">{selectedProject.title[language]}</h3>
             <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>
-              {selectedProject.longDescription}
+              {selectedProject.longDescription[language]}
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               {selectedProject.technologies.map((tech) => (
