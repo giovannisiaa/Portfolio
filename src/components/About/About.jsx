@@ -6,6 +6,15 @@ import { useTranslation } from '../../contexts/LanguageContext';
 const About = () => {
   const { translations } = useTranslation();
 
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Correo electrónico copiado');
+    }, (err) => {
+      console.error('Error al copiar: ', err);
+    });
+  };
+
+
   return (
     <section id="about" className="pt-24 pb-16 px-6">
       <div className="container mx-auto">
@@ -20,9 +29,15 @@ const About = () => {
             <h2 className="text-2xl text-blue-600 mb-4">{translations("about").role}</h2>
             <p className="text-lg text-white-600 mb-6">{translations("about").description}</p>
             <div className="flex space-x-4 items-center">
-              <FaGithub className="text-2xl hover:text-gray-700 cursor-pointer" />
-              <FaLinkedin className="text-2xl hover:text-blue-600 cursor-pointer" />
-              <FaEnvelope className="text-2xl hover:text-red-500 cursor-pointer" />
+              <a href="https://github.com/giovannisiaa" target="_blank" rel="noopener noreferrer">
+                <FaGithub className="text-2xl hover:text-gray-700 cursor-pointer" />
+              </a>
+              <a href="https://www.linkedin.com/in/giovanni-sia/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="text-2xl hover:text-blue-600 cursor-pointer" />
+              </a>
+              <button onClick={() => copyToClipboard('giovannisia4@gmail.com')} className="focus:outline-none">
+                <FaEnvelope className="text-2xl hover:text-red-500 cursor-pointer" />
+              </button>
               <a
                 href="/path-to-your-cv.pdf"
                 download
