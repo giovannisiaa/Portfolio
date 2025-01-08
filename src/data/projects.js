@@ -33,8 +33,8 @@ const projects =[
       "en": "E-commerce solution for a footwear company with integrated management systems."
     },
     "image": argentoShoes,
-    "demo": "https://demo.example.com",
-    "github": "https://github.com",
+    "demo": "https://www.youtube.com/watch?v=YawYgWzxTy0",
+    "github": "https://github.com/giovannisiaa/TP-Empresa-De-Calzado",
     "category": "applications",
     "technologies": [
       "Java",

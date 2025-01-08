@@ -13,7 +13,7 @@ const About = () => {
           <img
             src={image}
             alt="Profile"
-            className="w-48 h-48 rounded-full object-cover shadow-lg"
+            className="w-48 h-48 rounded-full shadow-lg"
           />
           <div className="md:w-2/3">
             <h1 className="text-4xl font-bold mb-2">{translations("about").greeting}</h1>

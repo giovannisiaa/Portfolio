@@ -46,7 +46,7 @@ const ProjectModal = ({ selectedProject, setSelectedProject }) => {
             <img
               src={selectedProject.images[currentImageIndex]}
               alt={`Project ${currentImageIndex + 1}`}
-              className="w-full h-full object-cover rounded-t-lg"
+              className="w-full h-full rounded-t-lg"
             />
             <button
               onClick={handlePrevImage}
