@@ -18,6 +18,8 @@ import cafe2 from '../assets/noviembreCafe/cafe2.png';
 import cafe3 from '../assets/noviembreCafe/cafe3.png';
 import cafe4 from '../assets/noviembreCafe/cafe4.png';
 
+import argentoShoes from '../assets/argentoShoes/argentoShoes1.png';
+
 
 const projects =[
   {
@@ -30,7 +32,7 @@ const projects =[
       "es": "Solución de comercio electrónico para una empresa de calzado con sistemas de gestión integrados.",
       "en": "E-commerce solution for a footwear company with integrated management systems."
     },
-    "image": "https://images.unsplash.com/photo-1661956602116-aa6865609028",
+    "image": argentoShoes,
     "demo": "https://demo.example.com",
     "github": "https://github.com",
     "category": "applications",
@@ -46,8 +48,7 @@ const projects =[
       "en": "The general objective of the project was the development and implementation of a software tool for a footwear company. This system is integrated with a system responsible for managing the daily operations of the factory, and another responsible for supporting the tasks of registration and distribution of wholesale and retail sales to its own branches."
     },
     "images": [
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb"
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c"
     ]
   },
   {
