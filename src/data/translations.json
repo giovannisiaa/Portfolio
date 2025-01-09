@@ -16,14 +16,14 @@
       "title": "Sobre mí",
       "greeting": "Hola, soy Giovanni",
       "role": "Desarrollador de Software",
-      "description": "Estudiante de la Licenciatura en Sistemas, apasionado por aprender y desarrollarme en el ámbito de IT. Busco mi primera experiencia laboral para aplicar y ampliar mis conocimientos en tecnologías. Me destaco por mi capacidad de aprendizaje rápido, resolución de problemas, trabajo en equipo y adaptabilidad.",
+      "description": "Estudiante de la Licenciatura en Sistemas, apasionado por aprender y desarrollarme en el ámbito de IT. Busco trabajar en proyectos para aplicar y ampliar mis conocimientos en tecnologías. Me destaco por mi capacidad de aprendizaje rápido, resolución de problemas, trabajo en equipo y solitario.",
       "downloadCV": "Descargar CV"
     },
     "en": {
       "title": "About",
       "greeting": "Hi, I'm Giovanni",
       "role": "Software Developer",
-      "description": "Computer Science undergraduate with a strong enthusiasm for learning and growing in the IT field. I am seeking my first professional experience to apply and expand my knowledge in technology. I excel in quick learning, problem-solving, teamwork, and adaptability.",
+      "description": "Student of the Bachelor's Degree in Systems, passionate about learning and developing in the IT field. I seek to work on projects to apply and expand my knowledge in technologies. I stand out for my ability to learn quickly, solve problems, work in a team and alone.",
       "downloadCV": "Download CV"
     }
   },

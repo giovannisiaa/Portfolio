@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa';
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import { useTranslation } from '../../contexts/LanguageContext';
+import personalData from "../../data/personalData";
 
 const Contact = () => {
   const { darkMode } = useDarkMode();
@@ -79,20 +80,20 @@ const Contact = () => {
             <div className="flex flex-col space-y-4">
               <h3 className={`text-xl font-bold mb-4`}>{translations("contact").connectWithMe}</h3>
               <a
-                href="#"
+                href={personalData.socials.github}
                 className="flex items-center space-x-3 text-white-700 hover:text-blue-600 transition"
               >
                 <FaGithub className="text-2xl" />
                 <span>GitHub</span>
               </a>
               <a
-                href="#"
+                href={personalData.socials.linkedin}
                 className="flex items-center space-x-3 text-white-700 hover:text-blue-600 transition"
               >
                 <FaLinkedin className="text-2xl" />
                 <span>LinkedIn</span>
               </a>
-              <button
+              <button onClick={() => window.open(personalData.resumeCV)}
                 className="flex items-center space-x-3 text-white-700 hover:text-blue-600 transition"
               >
                 <FaDownload className="text-2xl" />

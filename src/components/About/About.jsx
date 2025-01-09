@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
 import image from "../../assets/perfil.jpg";
 import { useTranslation } from '../../contexts/LanguageContext';
+import personalData from "../../data/personalData";
 
 const About = () => {
   const { translations } = useTranslation();
@@ -29,18 +30,19 @@ const About = () => {
             <h2 className="text-2xl text-blue-600 mb-4">{translations("about").role}</h2>
             <p className="text-lg text-white-600 mb-6">{translations("about").description}</p>
             <div className="flex space-x-4 items-center">
-              <a href="https://github.com/giovannisiaa" target="_blank" rel="noopener noreferrer">
+              <a href={personalData.socials.github} target="_blank" rel="noopener noreferrer">
                 <FaGithub className="text-2xl hover:text-gray-700 cursor-pointer" />
               </a>
-              <a href="https://www.linkedin.com/in/giovanni-sia/" target="_blank" rel="noopener noreferrer">
+              <a href={personalData.socials.linkedin} target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="text-2xl hover:text-blue-600 cursor-pointer" />
               </a>
-              <button onClick={() => copyToClipboard('giovannisia4@gmail.com')} className="focus:outline-none">
+              <button onClick={() => copyToClipboard(personalData.email)} className="focus:outline-none">
                 <FaEnvelope className="text-2xl hover:text-red-500 cursor-pointer" />
               </button>
               <a
-                href="/path-to-your-cv.pdf"
-                download
+                href={personalData.resumeCV}
+                target="_blank"
+                download="curriculum.pdf"
                 className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
               >
                 <FaDownload /> {translations("about").downloadCV}
