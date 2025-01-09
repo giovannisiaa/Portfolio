@@ -42,7 +42,7 @@ const projects =[
       "JasperReports",
       "Swing"
     ],
-    "videoId": "dQw4w9WgXcQ",
+    "videoId": "YawYgWzxTy0?si=0f4XzkizcyCjT9GC&amp;start=4",
     "longDescription": {
       "es": "El objetivo general del proyecto fue el desarrollo e implementación de una herramienta de software para una empresa de calzado. Dicho sistema, está integrado con un sistema encargado de gestionar la operatoria diaria de la fábrica, y otro encargado de soportar las tareas de registración y distribución de ventas mayoristas y minoristas a sus propias sucursales.",
       "en": "The general objective of the project was the development and implementation of a software tool for a footwear company. This system is integrated with a system responsible for managing the daily operations of the factory, and another responsible for supporting the tasks of registration and distribution of wholesale and retail sales to its own branches."

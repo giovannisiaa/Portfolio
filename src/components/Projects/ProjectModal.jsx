@@ -43,32 +43,47 @@ const ProjectModal = ({ selectedProject, setSelectedProject }) => {
 
           {/* Image Carousel */}
           <div className="relative h-96">
-            <img
-              src={selectedProject.images[currentImageIndex]}
-              alt={`Project ${currentImageIndex + 1}`}
-              className="w-full h-full rounded-t-lg"
-            />
-            <button
-              onClick={handlePrevImage}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-            >
-              <FaArrowLeft size={20} />
-            </button>
-            <button
-              onClick={handleNextImage}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-            >
-              <FaArrowRight size={20} />
-            </button>
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {selectedProject.images.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`w-3 h-3 rounded-full ${currentImageIndex === index ? "bg-white" : "bg-gray-400"}`}
+            {selectedProject.videoId ? (
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${selectedProject.videoId}`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="rounded-t-lg"
+              ></iframe>
+            ) : (
+              <>
+                <img
+                  src={selectedProject.images[currentImageIndex]}
+                  alt={`Project ${currentImageIndex + 1}`}
+                  className="w-full h-full rounded-t-lg"
                 />
-              ))}
-            </div>
+                <button
+                  onClick={handlePrevImage}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+                >
+                  <FaArrowLeft size={20} />
+                </button>
+                <button
+                  onClick={handleNextImage}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+                >
+                  <FaArrowRight size={20} />
+                </button>
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                  {selectedProject.images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-3 h-3 rounded-full ${currentImageIndex === index ? "bg-white" : "bg-gray-400"}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
 
           <div className="p-6">
