@@ -25,7 +25,7 @@ const Contact = () => {
   };
 
   return (
-    <section className={`bg-gray-50 ${darkMode ? "bg-gray-800" : "bg-white"} py-20 px-4`}>
+    <section id='contact' className={`bg-gray-50 ${darkMode ? "bg-gray-800" : "bg-white"} py-20 px-4`}>
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-3xl font-bold text-center mb-12">{translations("contact").getInTouch}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
