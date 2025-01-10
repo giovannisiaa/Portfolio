@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa';
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import { useTranslation } from '../../contexts/LanguageContext';
 import personalData from "../../data/personalData";
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
   const { darkMode } = useDarkMode();
@@ -14,18 +15,35 @@ const Contact = () => {
     message: ''
   });
 
+  const [captchaToken, setCaptchaToken] = useState(null);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleCaptchaChange = (token) => {
+    setCaptchaToken(token);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.send('service_odn9va7', 'template_g8aiq1t', formData, 'aYeR9Uxhc6XiPelIp')
+    if (!captchaToken) {
+      alert('Por favor, completa el CAPTCHA.');
+      return;
+    }
+
+    const dataToSend = {
+      ...formData,
+      'g-recaptcha-response': captchaToken
+    };
+
+    emailjs.send('service_o8j5oay', 'template_u6jp8me', dataToSend, 'c7ZyaP7XhrvqMD3-n')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert('Mensaje enviado con éxito!');
+        window.location.reload();
       }, (err) => {
         console.error('FAILED...', err);
         alert('Error al enviar el mensaje. Por favor, inténtalo de nuevo.');
@@ -75,6 +93,10 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
+              <ReCAPTCHA className='flex justify-center mb-6'
+                sitekey="6LfJALQqAAAAANzrUnfYsKCvMYcRwVTk0gQ7jJ0R"
+                onChange={handleCaptchaChange}
+              />
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
@@ -83,6 +105,7 @@ const Contact = () => {
               </button>
             </form>
           </div>
+
           <div className={`bg-gray-700 ${darkMode ? "bg-gray-700" : "bg-white"} rounded-lg shadow-lg p-8`}>
             <div className="flex flex-col space-y-4">
               <h3 className={`text-xl font-bold mb-4`}>{translations("contact").connectWithMe}</h3>
