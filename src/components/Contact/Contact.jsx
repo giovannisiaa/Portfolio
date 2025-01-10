@@ -21,8 +21,15 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío del formulario
-    console.log('Form data submitted:', formData);
+
+    emailjs.send('service_odn9va7', 'template_g8aiq1t', formData, 'aYeR9Uxhc6XiPelIp')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Mensaje enviado con éxito!');
+      }, (err) => {
+        console.error('FAILED...', err);
+        alert('Error al enviar el mensaje. Por favor, inténtalo de nuevo.');
+      });
   };
 
   return (
