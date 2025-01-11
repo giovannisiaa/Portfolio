@@ -13,7 +13,7 @@ const Header = () => {
       <header className={`fixed w-full ${darkMode ? "bg-gray-800" : "bg-white"} shadow-md z-50`}>
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold">Giovanni Sia</div>
+            <div className="text-2xl font-bold hidden-450">Giovanni Sia</div>
             <div className="flex items-center space-x-6">
               <button
                 onClick={() => setLanguage(language === "es" ? "en" : "es")}
