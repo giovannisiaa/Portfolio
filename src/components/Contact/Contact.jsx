@@ -94,7 +94,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <ReCAPTCHA className='flex justify-center mb-6'
-                sitekey="6LfJALQqAAAAANzrUnfYsKCvMYcRwVTk0gQ7jJ0R"
+                sitekey="6LcfT7QqAAAAAPyj_9jAF3NvvtmTgZEqdRS4mXmc"
                 onChange={handleCaptchaChange}
               />
               <button
