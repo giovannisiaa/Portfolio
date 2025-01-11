@@ -17,13 +17,13 @@ const Header = () => {
             <div className="flex items-center space-x-6">
               <button
                 onClick={() => setLanguage(language === "es" ? "en" : "es")}
-                className="text-blue-600 hover:text-blue-800"
+                className="text-blue-600 hover:text-blue-800 hidden-350"
               >
                 {language === "es" ? "EN" : "ES"}
               </button>
               <button
                 onClick={() => setDarkMode(!darkMode)}
-                className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+                className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 hidden-350"
               >
                 {darkMode ? <FaSun className="text-yellow-400" /> : <FaMoon className="text-gray-600" />}
               </button>

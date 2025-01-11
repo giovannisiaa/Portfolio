@@ -11,3 +11,8 @@ html {
     display: none;
   }
 }
+@media (max-width: 350px) {
+  .hidden-350 {
+    display: none;
+  }
+}
